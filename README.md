@@ -1,4 +1,4 @@
-# 考点网 :link: http://blog.meekdai.com 
+# 考点网 :link: https://ikaodian.github.io 
 ### :page_facing_up: [4](http://blog.meekdai.com/tag.html) 
 ### :speech_balloon: 0 
 ### :hibiscus: 821 
