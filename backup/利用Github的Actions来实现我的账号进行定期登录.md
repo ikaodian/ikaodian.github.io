@@ -52,6 +52,7 @@ yaml
 YouTube视频演示地址：https://youtu.be/TNB9tcJi_Uo
 
 B站视频演示地址：https://www.bilibili.com/video/BV1MNbseUERW/
-
+以上内容来自：
+https://www.zzzwb.com/2024/07-11-serv00-automation.html
 
 -------------------------------------------------------------------------
