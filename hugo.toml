@@ -6,6 +6,11 @@ theme = "PaperMod"
 locale = "zh-cn"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
+
+# 站点时区：Pages CMS 写出的日期不带时区偏移，Hugo 按这里解释。
+# 不设的话 Hugo 默认按 UTC，会把北京时间当成 UTC，文章日期凭空往后挪 8 小时，
+# 落在"未来"的文章默认不发布，首页就会看不到。
+timeZone = "Asia/Shanghai"
 hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true

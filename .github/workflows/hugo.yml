@@ -39,7 +39,9 @@ jobs:
           extended: true
 
       - name: Build with Hugo
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # --buildFuture：万一文章日期仍落在未来（比如刚写完、时间戳偏了一点），
+        # 也照常发布，避免出现"保存成功但首页看不到"
+        run: hugo --gc --minify --buildFuture --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

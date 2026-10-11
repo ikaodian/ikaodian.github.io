@@ -48,17 +48,22 @@ content:
         required: true
         options:
           time: true # 带时间，Hugo 排序才准
-          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+          # 不要写时区占位符 xxx：那会写出 +00:00（UTC），
+          # 但时间数字用的是你本机的钟点，等于把时间戳往后推了 8 小时，
+          # 落在"未来"的文章 Hugo 默认不发布，首页就看不到。
+          # 不写时区时，Hugo 按 hugo.toml 里的 timeZone = "Asia/Shanghai" 解释。
+          format: "yyyy-MM-dd'T'HH:mm:ss"
 
       - name: draft
-        label: 草稿状态
+        label: 草稿（勾上就不发布）
         type: boolean
-        default: true # 新建默认存草稿，勾掉才会发布
+        default: false # 新建默认直接发布；想先存草稿再手动勾上
 
       - name: slug
-        label: 链接别名（建议英文）
+        label: 链接别名（英文或拼音）
         type: string
-        description: 决定文件名和文章网址。建议英文小写加短横线，例如 hugo-setup → /posts/hugo-setup/。中文会被转义规则忽略，只用日期命名文件。
+        required: true
+        description: 决定文件名和文章网址，请填英文小写加短横线。例如 hugo-setup → 文件 2026-10-11-hugo-setup.md、网址 /posts/hugo-setup/。填中文会被转义规则清空，网址会变成 /posts/2026-10-11-/。
 
       - name: summary
         label: 文章摘要
