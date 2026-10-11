@@ -1,0 +1,122 @@
+baseURL = "https://ikaodian.github.io/"
+title = "i考点"
+theme = "PaperMod"
+
+# Hugo 0.158+ 用 locale（旧的 languageCode 已弃用）
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+enableInlineShortcodes = true
+summaryLength = 120
+
+# Hugo 0.128+ 的新写法（旧的 paginate 已弃用）
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  env = "production"
+  description = "学习笔记与考点整理"
+  author = "ikaodian"
+
+  # 外观
+  defaultTheme = "auto"
+
+  # 文章页元素
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  ShowToc = true
+  TocOpen = false
+  ShowFullTextinRSS = true
+
+  # 列表页
+  hideSummary = false
+  hidemeta = false
+
+  # 编辑本页链接
+  [params.editPost]
+    URL = "https://github.com/ikaodian/ikaodian.github.io/edit/main/content/"
+    Text = "建议修改"
+    appendFilePath = true
+
+  [params.assets]
+    favicon = "/favicon.svg"
+    disableHLJS = false
+
+  # 首页文案
+  [params.homeInfoParams]
+    Title = "你好，欢迎来到 i考点"
+    Content = """
+这里用来沉淀学习笔记、整理考点、记录踩过的坑。
+内容持续更新，可以从 **归档** 或 **标签** 开始逛，也支持站内 **搜索**。
+"""
+
+  # 社交图标
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/ikaodian"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
+
+  # 站内搜索
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 1
+    limit = 10
+    keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    lineNumbersInTable = true
+    anchorLineNos = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[[menu.main]]
+  name = "归档"
+  url = "archives/"
+  weight = 10
+
+[[menu.main]]
+  name = "标签"
+  url = "tags/"
+  weight = 20
+
+[[menu.main]]
+  name = "搜索"
+  url = "search/"
+  weight = 30
+
+[[menu.main]]
+  name = "关于"
+  url = "about/"
+  weight = 40
