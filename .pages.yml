@@ -1,0 +1,103 @@
+# ============================================================================
+# Pages CMS 配置（https://app.pagescms.org/）
+# 文件名必须是 .pages.yml，放在仓库根目录；改完要提交（commit）后才会生效。
+# 官方文档：https://pagescms.org/docs/configuration/
+# ============================================================================
+
+# 图片上传到哪里、写成什么链接
+media:
+  input: static/images # 上传的文件存进仓库的 static/images（Hugo 会把 static/ 原样发布）
+  output: /images # 写进文章里的链接是 /images/xxx.png
+  rename: safe # 上传时文件名转成小写短横线形式
+
+content:
+  # ---------------------------- 博客文章（集合） ----------------------------
+  - name: posts
+    label: 博客文章
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter # Hugo 用的就是 YAML front matter（--- 包裹）
+    filename: "{primary}.md" # 用标题当文件名（列表里的主字段）
+    view:
+      primary: title
+      fields: [title, date, draft]
+      sort: [date, title]
+      search: [title, tags]
+      default:
+        sort: date
+        order: desc
+    operations:
+      create: true
+      rename: true
+      delete: true
+    fields:
+      - name: title
+        label: 文章标题
+        type: string
+        required: true
+
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          time: true # 带时间，Hugo 排序才准
+          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+
+      - name: draft
+        label: 草稿状态
+        type: boolean
+        default: true # 新建默认存草稿，勾掉才会发布
+
+      - name: slug
+        label: 链接别名（可选，建议英文）
+        type: string
+        description: 留空则用文件名当链接；填了就用它，例如 hello-world → /posts/hello-world/
+
+      - name: summary
+        label: 文章摘要
+        type: text
+        description: 显示在列表页和搜索结果里，一两句话即可
+
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+
+      - name: categories
+        label: 分类
+        type: string
+        list: true
+
+      - name: body
+        label: 正文内容
+        type: rich-text
+        options:
+          format: markdown # Hugo 渲染的是 Markdown，不要选 html
+          switcher: true
+
+  # ---------------------------- 关于页（单文件） ----------------------------
+  - name: about
+    label: 关于页面
+    type: file
+    path: content/about.md
+    format: yaml-frontmatter
+    operations:
+      rename: false
+      delete: false
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+
+      - name: summary
+        label: 摘要
+        type: text
+
+      - name: body
+        label: 正文内容
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
