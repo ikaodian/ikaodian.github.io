@@ -17,7 +17,13 @@ content:
     type: collection
     path: content/posts
     format: yaml-frontmatter # Hugo 用的就是 YAML front matter（--- 包裹）
-    filename: "{primary}.md" # 用标题当文件名（列表里的主字段）
+    # 文件名模板：必须带日期前缀！
+    # Pages CMS 会把 {…} 里的值做 slugify(strict)，中文标题会被处理成空字符串，
+    # 于是 "{primary}.md" 会变成 ".md"（点开头的隐藏文件），扩展名解析为空，
+    # 保存时报 Invalid extension "" for content "posts"。
+    # 加日期前缀后即使 slug 为空也能得到 2026-10-11-.md，扩展名始终是 md。
+    # 注意 {slug} 是 {primary} 的别名（指标题），要取 slug 字段必须写 {fields.slug}
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
     view:
       primary: title
       fields: [title, date, draft]
@@ -50,9 +56,9 @@ content:
         default: true # 新建默认存草稿，勾掉才会发布
 
       - name: slug
-        label: 链接别名（可选，建议英文）
+        label: 链接别名（建议英文）
         type: string
-        description: 留空则用文件名当链接；填了就用它，例如 hello-world → /posts/hello-world/
+        description: 决定文件名和文章网址。建议英文小写加短横线，例如 hugo-setup → /posts/hugo-setup/。中文会被转义规则忽略，只用日期命名文件。
 
       - name: summary
         label: 文章摘要
