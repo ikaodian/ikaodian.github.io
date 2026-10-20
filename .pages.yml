@@ -57,10 +57,11 @@ content:
         type: boolean
         default: false # 新建默认直接发布；想先存草稿再手动勾上
 
-      - name: slug
-        label: 链接别名（可选，留空自动生成）
-        type: string
-        description: 留空时网址自动用"日期+时分秒"生成（如 /posts/2026-10-11-203145/），不用每次填。想自定义英文别名时再填，例如 hugo-setup → /posts/hugo-setup/。
+      # 说明：原先的"链接别名(slug)"字段已移除。
+      # Pages CMS 没有"随机生成"令牌，slug 无法自动填充，每次都要手填很麻烦。
+      # 现由 filename 模板 "{year}-{month}-{day}-{hour}{minute}{second}.md"
+      # 在保存时自动生成唯一文件名，Hugo 网址即 /posts/2026-10-11-143025/，无需填写。
+      # 若以后想给某篇设自定义英文网址，再单独加回 slug 字段即可。
 
       - name: summary
         label: 文章摘要
