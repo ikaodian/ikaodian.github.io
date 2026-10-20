@@ -3,7 +3,6 @@ title: Ubuntu下crontab的安装和使用
 date: 2021-07-08
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 251
 original_url: https://kaodian.org/?id=251
 ---

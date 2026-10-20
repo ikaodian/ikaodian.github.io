@@ -2,7 +2,6 @@
 title: '吹牛逼网站安装文件的设置'
 date: 2023-04-29 15:36:57
 tags: []
-published: true
 hideInList: false
 feature: 
 isTop: false

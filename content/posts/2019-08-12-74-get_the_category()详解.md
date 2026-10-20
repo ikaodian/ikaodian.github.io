@@ -3,7 +3,6 @@ title: get_the_category()详解
 date: 2019-08-12
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 74
 original_url: https://kaodian.org/?id=74
 ---

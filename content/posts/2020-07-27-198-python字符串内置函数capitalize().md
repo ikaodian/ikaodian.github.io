@@ -3,7 +3,6 @@ title: python字符串内置函数capitalize()
 date: 2020-07-27
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 198
 original_url: https://kaodian.org/?id=198
 ---

@@ -3,7 +3,6 @@ title: header Editor插件的下载和安装配置
 date: 2022-10-30
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 349
 original_url: https://kaodian.org/?id=349
 ---

@@ -3,7 +3,6 @@ title: Hitomi Downloader
 date: 2022-10-31
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 352
 original_url: https://kaodian.org/?id=352
 ---

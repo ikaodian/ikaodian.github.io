@@ -2,7 +2,6 @@
 title: '《邓稼先》讲课重点'
 date: 2025-02-16 15:20:19
 tags: [教案]
-published: true
 hideInList: false
 feature: 
 isTop: false

@@ -2,7 +2,6 @@
 title: '送东阳马生序'
 date: 2026-05-06 17:36:21
 tags: []
-published: true
 hideInList: false
 feature: 
 isTop: false

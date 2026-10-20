@@ -2,7 +2,6 @@
 title: 'Quick cut'
 date: 2023-06-04 14:38:24
 tags: []
-published: true
 hideInList: false
 feature: 
 isTop: false

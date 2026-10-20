@@ -3,7 +3,6 @@ title: python 内置函数filter,map,reduce
 date: 2021-08-24
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 266
 original_url: https://kaodian.org/?id=266
 ---

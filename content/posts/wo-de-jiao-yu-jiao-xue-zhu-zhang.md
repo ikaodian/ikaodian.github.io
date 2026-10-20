@@ -2,7 +2,6 @@
 title: '我的教育教学主张'
 date: 2023-07-29 07:15:35
 tags: []
-published: true
 hideInList: false
 feature: 
 isTop: false

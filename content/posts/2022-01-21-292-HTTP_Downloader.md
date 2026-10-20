@@ -3,7 +3,6 @@ title: HTTP Downloader
 date: 2022-01-21
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 292
 original_url: https://kaodian.org/?id=292
 ---

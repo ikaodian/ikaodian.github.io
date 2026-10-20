@@ -17,13 +17,11 @@ content:
     type: collection
     path: content/posts
     format: yaml-frontmatter # Hugo 用的就是 YAML front matter（--- 包裹）
-    # 文件名模板：必须带日期前缀！
-    # Pages CMS 会把 {…} 里的值做 slugify(strict)，中文标题会被处理成空字符串，
-    # 于是 "{primary}.md" 会变成 ".md"（点开头的隐藏文件），扩展名解析为空，
-    # 保存时报 Invalid extension "" for content "posts"。
-    # 加日期前缀后即使 slug 为空也能得到 2026-10-11-.md，扩展名始终是 md。
-    # 注意 {slug} 是 {primary} 的别名（指标题），要取 slug 字段必须写 {fields.slug}
-    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    # 文件名模板：用"日期 + 时分秒"自动生成，每次保存都唯一，且不依赖 slug 字段，
+    # 因此 slug 留空也不会出现 2026-10-11-.md 这种悬空文件名 / .md 隐藏文件报错。
+    # 之前的坑：{primary}/{fields.slug} 经 slugify(strict) 中文会变空 → 退化成 ".md" 报错；
+    # 现在用时间令牌兜底，扩展名恒为 md。
+    filename: "{year}-{month}-{day}-{hour}{minute}{second}.md"
     view:
       primary: title
       fields: [title, date, draft]
@@ -60,10 +58,9 @@ content:
         default: false # 新建默认直接发布；想先存草稿再手动勾上
 
       - name: slug
-        label: 链接别名（英文或拼音）
+        label: 链接别名（可选，留空自动生成）
         type: string
-        required: true
-        description: 决定文件名和文章网址，请填英文小写加短横线。例如 hugo-setup → 文件 2026-10-11-hugo-setup.md、网址 /posts/hugo-setup/。填中文会被转义规则清空，网址会变成 /posts/2026-10-11-/。
+        description: 留空时网址自动用"日期+时分秒"生成（如 /posts/2026-10-11-203145/），不用每次填。想自定义英文别名时再填，例如 hugo-setup → /posts/hugo-setup/。
 
       - name: summary
         label: 文章摘要

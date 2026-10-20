@@ -3,7 +3,6 @@ title: hexo+github教程之三：hexo next主题配置
 date: 2021-12-31
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 287
 original_url: https://kaodian.org/?id=287
 ---

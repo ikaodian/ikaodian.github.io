@@ -3,7 +3,6 @@ title: python中continue和break的区别、乘法表
 date: 2020-12-30
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 228
 original_url: https://kaodian.org/?id=228
 ---

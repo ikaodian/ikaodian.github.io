@@ -3,7 +3,6 @@ title: 本地安装wordpress无法加载css问题的解决办法
 date: 2019-07-19
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 69
 original_url: https://kaodian.org/?id=69
 ---

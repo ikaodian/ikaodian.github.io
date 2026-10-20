@@ -3,7 +3,6 @@ title: https://devfile.cn/preview/tf09z0l1
 date: 2026-05-17
 categories: [yuwen]
 category_slugs: [yuwen]
-type: post
 original_id: 483
 original_url: https://kaodian.org/?id=483
 ---

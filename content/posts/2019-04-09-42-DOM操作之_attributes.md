@@ -3,7 +3,6 @@ title: DOM操作之 attributes
 date: 2019-04-09
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 42
 original_url: https://kaodian.org/?id=42
 ---

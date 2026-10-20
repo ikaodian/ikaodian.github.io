@@ -3,7 +3,6 @@ title: DeepSeek登陆不上，可以用硅基流动带来一站式AI体验，注
 date: 2025-02-04
 categories: [yuwen]
 category_slugs: [yuwen]
-type: post
 original_id: 454
 original_url: https://kaodian.org/?id=454
 ---

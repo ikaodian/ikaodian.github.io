@@ -3,7 +3,6 @@ title: django 链接mysql 和orm相关知识
 date: 2022-05-22
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 316
 original_url: https://kaodian.org/?id=316
 ---

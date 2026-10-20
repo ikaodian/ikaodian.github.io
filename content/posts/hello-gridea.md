@@ -2,7 +2,6 @@
 title: 'Hello Gridea'
 date: 2018-12-12 00:00:00
 tags: [Gridea]
-published: true
 hideInList: false
 feature: /post-images/hello-gridea.png
 isTop: false

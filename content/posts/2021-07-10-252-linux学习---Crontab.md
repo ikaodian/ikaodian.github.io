@@ -3,7 +3,6 @@ title: linux学习---Crontab
 date: 2021-07-10
 categories: [aihao]
 category_slugs: [aihao]
-type: post
 original_id: 252
 original_url: https://kaodian.org/?id=252
 ---

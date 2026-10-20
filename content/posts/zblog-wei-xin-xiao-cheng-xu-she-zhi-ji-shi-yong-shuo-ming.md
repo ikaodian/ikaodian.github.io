@@ -2,7 +2,6 @@
 title: 'zblog微信小程序设置及使用说明'
 date: 2023-11-26 08:06:01
 tags: [微信小程序]
-published: true
 hideInList: false
 feature: https://www.tou5.cn/zb_users/upload/2022/01/202201071641544222852096.png
 isTop: false
