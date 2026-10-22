@@ -1,14 +1,7 @@
 ---
-title: "关于"
-date: 2026-10-11T15:20:00+08:00
-lastmod: 2026-10-11T15:20:00+08:00
-draft: false
-author: "ikaodian"
-summary: "关于这个站点和我自己。"
-showToc: false
-TocOpen: false
+title: 关于
+summary: 关于这个站点和我自己。
 ---
-
 ## 关于本站
 
 这里是一个个人的学习笔记站，主要用来沉淀：
@@ -23,7 +16,8 @@ TocOpen: false
 
 你好，我是 ikaodian。可以在这里找到我：
 
-- GitHub：<https://github.com/ikaodian>
+- GitHub：[https://github.com/ikaodian](https://github.com/ikaodian)
+- 微信公众号：考点网
 
 ## 联系与建议
 
