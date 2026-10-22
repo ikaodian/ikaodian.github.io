@@ -18,6 +18,7 @@ summary: 关于这个站点和我自己。
 
 - GitHub：[https://github.com/ikaodian](https://github.com/ikaodian)
 - 微信公众号：考点网
+- 网址：https://kaodian.org
 
 ## 联系与建议
 
